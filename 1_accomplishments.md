@@ -1,4 +1,4 @@
-Goals
+Goals (JUST FOR INFORMATION)
 =====
 
 The overarching goal of this grant is to dramatically improve biodiversity
@@ -183,11 +183,88 @@ Name finding is mostly a goal for 2nd year of the grant. In this year we
 rewrote from scratch Ruby-based web service to make it compatible with future
 scala-based name-finding algorithm, and to make it Docker-compatible.
 
+Papers in peer review journals
+------------------------------
+
+Paper "Challenges with using names to link digital biodiversity information"
+submitted to ZooKeys and in the process of incorporating suggestions from
+reviewers
+
+Paper "gnparser: A powerful scientific name parser based on parsing expression
+grammars" final stages for submission to BMC Bioinformatics
+
+Paper "gn-crossmap: A Tool to Verify Scientic NamesChecklists" is in
+preparation
+
 Tight integration with other components of Global Names Architecture
 --------------------------------------------------------------------
 
 We had a workshop with Richard Pyle on coordinating efforts, and brining
 together Global Name Usage Bank and our name resolution services. We coauthored
-a new grant proposal with a main goal to populate GNUB with data. We are also
-in the process of talks with Catalogue of Life to connect CoL taxonomic
-services with name resolution, name finding services and with GNUB.
+a new grant proposal with a main goal to populate GNUB with data.
+
+Integration with Catqlogue of Life
+----------------------------------
+
+This year we had a breakthrough in relationships with Catalogue of Life
+taxonomic database. We consider it to be extremely important to coordinate our
+efforts with Catalogue of Life, as the project is manually curated collection
+with an aim to collect currently used names for all species on Earth. Our
+algorithmic approach in name parsing, lexical reconciliation, nomenclatural
+intelligence (through GNUB) naturally extended by manually curated list of
+currently used species names. We are very excited about cooperation with
+Catalogue of Life. Dmitry Mozzherin is working close with their team, and also
+became part of CoL Global Team.
+
+Key outcomes and other achievements
+===================================
+
+1. Creation of gnparser -- accurate, scalable, fast parsing library and service
+
+2. Exploration of machine learning techniques for estimate the quality of
+scientific names and collections of scientific names
+
+3. Participation in Phylotastic project, providing a name-finding/resolution
+services for creation of phylogenetic trees from lists, photographic images,
+creation of mobile applications which is able to recognize and scientific
+names, find useful information about species etc.
+
+4. Creation of computing cluster, acquiring experience in usage of Chef, Docker,
+Linux Containers, Kubernetes technologies to make highly scalable, fault
+tolerant name services.
+
+5. Migration of Global Names services from Marine Biological Laboratory to
+University of Illinois
+
+6. Rewriting of name finding service making it Docker compatible, future proof,
+well tested, ready for Scala name-finding libraries.
+
+7. Work with Catalogue of Life, on tight integration of our services
+
+8. Finding a new stable home for Global Names project at University of
+Illinois.
+
+
+What opportunities for training and professional development has the project provided?
+======================================================================================
+
+We participated in Google Summer of Code in 2015 and mentored two students in
+machine learning techniques and creation of web-based system administration
+tools
+
+We participated in Phylotastic project and in training students about
+programming techniques, test-driven development, agile programming techniques.
+Also we trained studens in using Global Names tools.
+
+We participated in 3 hackathons and 2 workshops sharing approaches we use, and
+learning from other groups about usage of Scala and Spark technologies.
+
+How have the results been disseminated to communities of interest?
+==================================================================
+
+We disseminated results of our research and development through video meetings,
+participation in workshops and hackathons, publishing news about developments
+in Global Names project, posting messages on GitHub, Gitter, Tweeter
+
+
+
