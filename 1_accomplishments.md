@@ -55,7 +55,9 @@ multi-computer systems as Spark.
 Planning
 --------
 
-We developed the roadmap based on Scala, which includes following steps:
+We developed the roadmap based on Scala, which includes the following major
+steps:
+
   1. Creation of Scala-based parser for scientific names
   2. Creation of Scala-based name index, name resolution service
   3. Creation of Scala based name finding service which is based on name
@@ -68,6 +70,15 @@ Programming
 The goals of the grant heavily depend on programming. Alexander Myltsev, our
 primary Scala developer had been able to lead technical part of the project. He
 made a significant progress in making necessary libraries, tools and services.
+Dmitry Mozzherin had been working together with Alexander writing Scala-based
+parser, and rewriting name finding code, creating a cross-mapping tool for
+scientific names lists.
+
+Writing Scientific Papers
+-------------------------
+
+Our team worked on preparation of 3 papers to place them to biodiversity
+informatics journals.
 
 Community building
 ------------------
@@ -93,16 +104,31 @@ Moving Global Names to University of Illinois, setting up servers, operating
 systems, Chef, Docker, CoreOS, Kubernetes had been our activities in System
 Administration.
 
-Major Accomplishments
+Specific Objectives
+===================
+
+1. Creation of scalable, stable, high quality services in Scala language
+
+2. Reworking of algorithims used in the services
+
+3. Moving services to University of Illinois
+
+4. Developing approaches whch would make our services easy to install locally
+
+5. Integration with other components of Global Names Architecture
+
+6. Integration with Catalogue of Life, exploration of  use cases for our
+services
+
+Significant Results
 =====================
 
 Scalable, stable, production level name services
 ------------------------------------------------
 
 We used existing "prototype" name parsing, finding, resolving projects as a
-guideline for creation of much faster, scalable new services. Fist we needed
-to decide on a programming language platform. 
-
+guideline for creation of much faster, scalable new services written mostly in
+Scala programming language.
 
 In the first year we developed production-ready scientific name parsing library
 -- gnparser. The library had point releases so far. To our knowledge it is a
@@ -120,6 +146,21 @@ service. We developed a proof of concept version so far. It is heavily based on
 very fast name parser, and we hope to be able to process 1000 names in less
 than a second. We also create architecture which should withstand massive load
 on our servers.
+
+Rework of underlying algorithms for name finding, resolution, reconciliation
+---------------------------------------------------------------------------
+
+We rewrote name parsing algorithm. We still use Parins Expression
+Grammar approach, the same we used for our popular Ruby-based parser. Scala
+version makes it possible to do the same work more about two orders of
+magnitude faster and cheaper. We are in the process of dramatically increasing
+speed of name resolution algorithms.
+
+We are currently working on name resolution algorithms to make them
+more than one order of magnitude faster.
+
+We won participation as mentors in Google Summer of Code, and used it to create
+novel arpproaches in quality estimation of scientific names
 
 Replication mechanisms to simplify creation of local names services
 -------------------------------------------------------------------
@@ -141,18 +182,6 @@ Kubernetes approach makes it at least order of magnitude easier.
 Name finding is mostly a goal for 2nd year of the grant. In this year we
 rewrote from scratch Ruby-based web service to make it compatible with future
 scala-based name-finding algorithm, and to make it Docker-compatible.
-
-Rework of underlying algorithms for name finding, resolution, reconciliation
----------------------------------------------------------------------------
-
-We rewrote name parsing algorithm. We still use Parins Expression
-Grammar approach, the same we used for our popular Ruby-based parser. Scala
-version makes it possible to do the same work more about two orders of
-magnitude faster and cheaper. We are in the process of dramatically increasing
-speed of name resolution algorithms.
-
-We are currently working on name resolution algorithms to make them
-more than one order of magnitude faster.
 
 Tight integration with other components of Global Names Architecture
 --------------------------------------------------------------------
