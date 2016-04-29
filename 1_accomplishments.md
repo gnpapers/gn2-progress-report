@@ -29,9 +29,14 @@ Team building
 We spent significant effort creating a dynamic, professional team to bring
 success to the project. When the grant had been written we hoped to employ
 programmers and system administrators of Encyclopedia of Life (EOL) Project.
-By the time of funding EOL team had decreased to two programmers, and we needed to
-find other high quality professionals. During our first round of hiring we were not
-successful. However, Dmitry Mozzherin aquired the necessary systems administration skills (in part by moving the EOL to the Smithsonian) and we were also able to employ an advanced developer with experience in Scala. Taxonomical and nomenclatural knowledge is provided by former lead coordinator of Global Names project -- David Patterson. Ultimately we were able to get high quality experts for all important aspects of our work.
+By the time of funding EOL team had decreased to two programmers, and we needed
+to find other high quality professionals. During our first round of hiring we
+were not successful. However, Dmitry Mozzherin aquired the necessary systems
+administration skills (in part by moving the EOL to the Smithsonian) and we
+were also able to employ an advanced developer with experience in Scala.
+Taxonomical and nomenclatural knowledge is provided by former lead coordinator
+of Global Names project -- David Patterson. Ultimately we were able to get high
+quality experts for all important aspects of our work.
 
 Selection of a programming language platform
 --------------------------------------------
@@ -43,8 +48,8 @@ created for modern multi-processor, connected to network computers, both are
 fast, compiled languages. In the end we chose Scala, because it is based on
 Java Virtual Machine environment. That means that the code we write in Scala
 can be used in a wide variety of JVM-compatible languages -- Java, Scala, R,
-Jython, JRuby.  It also allows us to take advantage of Spark -- a "Big Data"-oriented
-multiprocessor, multi-computer framework.
+Jython, JRuby.  It also allows us to take advantage of Spark -- a "Big
+Data"-oriented multiprocessor, multi-computer framework.
 
 Planning
 --------
@@ -89,9 +94,10 @@ iDigBio, Global Names Architecture, and the University of Arisona.
 
 Dmitry Mozzherin was invited to a position at University of Illinois with the
 Species File Group team, where he started cooperation with one of the leading
-taxonomic projects -- Catalogue of Life, and with the projects of the SFG that presently supports individuals in over 60 projects biodiversity informatics projects. Dmitry became part of the Global Team
-of Catalogue of Life. We continue to work closely with Encyclopedia of Life
-project.
+taxonomic projects -- Catalogue of Life, and with the projects of the SFG that
+presently supports individuals in over 60 projects biodiversity informatics
+projects. Dmitry became part of the Global Team of Catalogue of Life. We
+continue to work closely with Encyclopedia of Life project.
 
 System administration
 ---------------------
@@ -193,12 +199,12 @@ Integration with Catalogue of Life
 This year we had a breakthrough in relationship with Catalogue of Life
 taxonomic database. We consider it to be extremely important to coordinate our
 efforts with Catalogue of Life, as the project is manually curated collection
-with an aim to aggregate currently names for "valid" taxonomic concepts along with their synonyms for all
-species on Earth. Our algorithmic approach in name parsing, lexical
-reconciliation, nomenclatural intelligence (through GNUB) is naturally extended by
-the manually curated list of currently used species names. We are very excited
-about cooperation with Catalogue of Life. Dmitry Mozzherin is working close
-with their team.
+with an aim to aggregate currently names for "valid" taxonomic concepts along
+with their synonyms for all species on Earth. Our algorithmic approach in name
+parsing, lexical reconciliation, nomenclatural intelligence (through GNUB) is
+naturally extended by the manually curated list of currently used species
+names. We are very excited about cooperation with Catalogue of Life. Dmitry
+Mozzherin is working close with their team.
 
 Key outcomes and other achievements
 ===================================
