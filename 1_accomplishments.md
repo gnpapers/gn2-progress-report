@@ -33,24 +33,24 @@ By the time of funding EOL team decreased to two programmers, and we needed to
 find other high quality professionals. During first round of search we were not
 successful. However Dmitry Mozzherin, had been funded by EOL to acquire system
 administration skills to move EOL project to Smithsonian's National Museum of
-Natural History. We also were able to employ a developer of core Scala
+Natural History. We also were able to employ a developer of important Scala
 libraries for the project. Taxonomical and nomenclatural knowledge is provided
 by former lead coordinator of Global Names project -- David Patterson. As a
-result we were able to get high quality experts for all important parts
-aspects.
+result we were able to get high quality experts for all important aspects or
+work.
 
 Selection of a programming language platform
 --------------------------------------------
 
 Advances in CPU manufacturing in the recent years created a need for
 multiprocess, multi-threaded programming solutions. Our choice for a
-programming language had narrowed down to 2 languages -- Go and Scala. Both are
-created for modern multi-processor computers, both are fast, compiled
-languages. We chose Scala in the end, because it is based on Java Virtual
-Machine environment. That means that the code we write in Scala can be used in
-a wide variety of JVM-compatible languages -- Java, Scala, R, Jython, JRuby.
-Also it allows to take advantage of such Big Data-oriented multiprocessor,
-multi-computer systems as Spark.
+programming language narrowed down to 2 languages -- Go and Scala. Both are
+created for modern multi-processor, connected to network computers, both are
+fast, compiled languages. In the end we chose Scala, because it is based on
+Java Virtual Machine environment. That means that the code we write in Scala
+can be used in a wide variety of JVM-compatible languages -- Java, Scala, R,
+Jython, JRuby.  Also it allows to take advantage Spark -- a "Big Data"-oriented
+multiprocessor, multi-computer framework.
 
 Planning
 --------
@@ -60,9 +60,9 @@ steps:
 
   1. Creation of Scala-based parser for scientific names
   2. Creation of Scala-based name index, name resolution service
-  3. Creation of Scala based name finding service which is based on name
-  parsing algorithm, and names selected from texts based on heuristic and
-  machine learning techniques.
+  3. Creation of Scala based name-finding service based on name
+     parsing algorithm, and names selected from texts using heuristic and
+     machine learning techniques.
 
 Programming
 -----------
@@ -72,7 +72,7 @@ primary Scala developer had been able to lead technical part of the project. He
 made a significant progress in making necessary libraries, tools and services.
 Dmitry Mozzherin had been working together with Alexander writing Scala-based
 parser, and rewriting name finding code, creating a cross-mapping tool for
-scientific names lists.
+lists of scientific names.
 
 Writing Scientific Papers
 -------------------------
@@ -84,14 +84,16 @@ Community building
 ------------------
 
 Dmitry Mozzherin participated in writing a proposal for Phylotastic project,
-and now provides technical managerial and programming service to the project
-(NSF Avard Number #1458572). We rewrote http://globalnames.org page to make
-clearly state goals of our project, introduce tools we built. Create a place to
-share news of our progress. We also use Tweeter for disseminating information.
-We participated in a number of hackathons, and workshops organized by Catalogue
-of Life, iDigBio, Global Names Architecture, University of Arisona.
+and now provides technical, managerial and programming service to the project
+(NSF Avard Number #1458572). We got request from OpenTree to get crosslinking
+services and working on implementing solutions. We rewrote
+http://globalnames.org page to clearly state goals of our project and to
+introduce tools we built. The site is helds a blog to convey news of our
+progress. We also use Tweeter for disseminating information.  We participated
+in a number of hackathons, and workshops organized by Catalogue of Life,
+iDigBio, Global Names Architecture, University of Arisona.
 
-Dmitry Mozzherin was invited to a position at University of Illinois into
+Dmitry Mozzherin was invited to a position at University of Illinois at
 Species Group team, where he started cooperation with one of the leading
 taxonomic projects -- Catalogue of Life. Dmitry became part of the Global Team
 of Catalogue of Life. We continue to work closely with Encyclopedia of Life
@@ -109,15 +111,15 @@ Specific Objectives
 
 1. Creation of scalable, stable, high quality services in Scala language
 
-2. Reworking of algorithims used in the services
+2. Reworking of algorithms used in the services
 
 3. Moving services to University of Illinois
 
-4. Developing approaches whch would make our services easy to install locally
+4. Developing approaches which would make our services easy to install locally
 
 5. Integration with other components of Global Names Architecture
 
-6. Integration with Catalogue of Life, exploration of  use cases for our
+6. Integration with Catalogue of Life, exploration of use cases for our
 services
 
 Significant Results
@@ -131,15 +133,17 @@ guideline for creation of much faster, scalable new services written mostly in
 Scala programming language.
 
 In the first year we developed production-ready scientific name parsing library
--- gnparser. The library had point releases so far. To our knowledge it is a
-state of the art parser which highest precision and recall statistics. It is
-also able to parse 30million names per one cpu per hour, which is exaclty 10
-times faster than parser we wrote in Ruby. Also it scales linearly up to 4
-processors, which means we are able to parse 120 million names an hour very
-cost-effectively. We wrote extensive documentation for the parser, and
-developed examples how to use it in 5 different languages, made it available
-for Spark BigData platform, created TCP/IP socket and REST services, as well as
-  command line program for parsing.
+-- gnparser. The library went through 3 official releases. To our knowledge it
+is a state of the art parser which highest precision and recall for parsing
+scientific names. It is able to parse 30 million names per one CPU per hour,
+which is 10 times faster than our Ruby-based parser. Also it scales linearly up
+to 4 processors, which means we are able to parse 120 million names an hour
+very cost-effectively. Taking in account increased scalability, throughput for
+name parsing increases by 2 orders of magnitude removing previously existing
+bottleneck in performance. We wrote extensive documentation for the parser, and
+developed examples how to use it in 5 different programming languages, made it
+available for Spark platform, created TCP/IP socket and REST services, as well
+as command line application.
 
 We are in the process of developing Scala based name index and name resolution
 service. We developed a proof of concept version so far. It is heavily based on
@@ -150,38 +154,28 @@ on our servers.
 Rework of underlying algorithms for name finding, resolution, reconciliation
 ---------------------------------------------------------------------------
 
-We rewrote name parsing algorithm. We still use Parins Expression
-Grammar approach, the same we used for our popular Ruby-based parser. Scala
-version makes it possible to do the same work more about two orders of
-magnitude faster and cheaper. We are in the process of dramatically increasing
-speed of name resolution algorithms.
+We rewrote name parsing algorithm. We still use the Parsing Expression Grammar
+approach, the same we used for our popular Ruby-based parser.  We are in the
+process of dramatically increasing speed of name resolution algorithms.
 
-We are currently working on name resolution algorithms to make them
-more than one order of magnitude faster.
+We won participation as mentors in Google Summer of Code in 2015, and used it
+to create novel machine learning approaches to estimate the quality of
+scientific names
 
-We won participation as mentors in Google Summer of Code, and used it to create
-novel arpproaches in quality estimation of scientific names
-
-Replication mechanisms to simplify creation of local names services
+Simplify creation of local names services
 -------------------------------------------------------------------
 
-We moved to linux containers approach to increase scalability and at the same
+We moved to Linux containers to increase scalability and at the same
 time hugely simplify installation of our products in local environments. We
 moved all our production services to Docker platform which allows to install
-all services with a one command on a terminal instead of complex instructions.
+each of our services with just one command.
 
-We also in the process of configuring CoreOS cluster which together with
-OpenSource project Kubernetes developed by Goggle and used by Google internally
-to create a massive fault tolerant system for running our services. We
+We also in the process of configuring CoreOS cluster which together with Open
+source project Kubernetes developed by Goggle and used by Google internally to
+create a massive fault tolerant system for running our services. We
 successfully tried this approach on Google Engine Cloud first and now we are
-implementing it for bare-metal machines in University of Illinois Data center.
-In spite of significant complexity of from system administration point of view
-of name resolution, and especially name finding services -- Docker and
-Kubernetes approach makes it at least order of magnitude easier.
-
-Name finding is mostly a goal for 2nd year of the grant. In this year we
-rewrote from scratch Ruby-based web service to make it compatible with future
-scala-based name-finding algorithm, and to make it Docker-compatible.
+implementing it for bare-metal machines in the University of Illinois Advanced
+Computing center.
 
 Papers in peer review journals
 ------------------------------
@@ -191,7 +185,7 @@ submitted to ZooKeys and in the process of incorporating suggestions from
 reviewers
 
 Paper "gnparser: A powerful scientific name parser based on parsing expression
-grammars" final stages for submission to BMC Bioinformatics
+grammars" is on the final stages for submission to BMC Bioinformatics
 
 Paper "gn-crossmap: A Tool to Verify Scientic NamesChecklists" is in
 preparation
@@ -206,22 +200,22 @@ a new grant proposal with a main goal to populate GNUB with data.
 Integration with Catqlogue of Life
 ----------------------------------
 
-This year we had a breakthrough in relationships with Catalogue of Life
+This year we had a breakthrough in relationship with Catalogue of Life
 taxonomic database. We consider it to be extremely important to coordinate our
 efforts with Catalogue of Life, as the project is manually curated collection
-with an aim to collect currently used names for all species on Earth. Our
-algorithmic approach in name parsing, lexical reconciliation, nomenclatural
-intelligence (through GNUB) naturally extended by manually curated list of
-currently used species names. We are very excited about cooperation with
-Catalogue of Life. Dmitry Mozzherin is working close with their team, and also
-became part of CoL Global Team.
+with an aim to aggregate currently used names and their synonyms for all
+species on Earth. Our algorithmic approach in name parsing, lexical
+reconciliation, nomenclatural intelligence (through GNUB) naturally extended by
+manually curated list of currently used species names. We are very excited
+about cooperation with Catalogue of Life. Dmitry Mozzherin is working close
+with their team.
 
 Key outcomes and other achievements
 ===================================
 
 1. Creation of gnparser -- accurate, scalable, fast parsing library and service
 
-2. Exploration of machine learning techniques for estimate the quality of
+2. Exploration of machine learning techniques to estimate the quality of
 scientific names and collections of scientific names
 
 3. Participation in Phylotastic project, providing a name-finding/resolution
@@ -244,6 +238,12 @@ well tested, ready for Scala name-finding libraries.
 8. Finding a new stable home for Global Names project at University of
 Illinois.
 
+9. Creation of sysopia -- a computer cluster monitoring program developed by a
+student during Google Summer of Code.
+
+10. Creation of gn-crossmapper -- an application for comparison large lists of
+scientific names between two different datasets.
+
 
 What opportunities for training and professional development has the project provided?
 ======================================================================================
@@ -254,7 +254,7 @@ tools
 
 We participated in Phylotastic project and in training students about
 programming techniques, test-driven development, agile programming techniques.
-Also we trained studens in using Global Names tools.
+Also we trained students in using Global Names tools.
 
 We participated in 3 hackathons and 2 workshops sharing approaches we use, and
 learning from other groups about usage of Scala and Spark technologies.
@@ -265,6 +265,3 @@ How have the results been disseminated to communities of interest?
 We disseminated results of our research and development through video meetings,
 participation in workshops and hackathons, publishing news about developments
 in Global Names project, posting messages on GitHub, Gitter, Tweeter
-
-
-
